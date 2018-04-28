@@ -1,0 +1,223 @@
+<html>
+<head>
+<style>
+body{
+background-color:red;
+}
+
+ul{
+list-style: none;
+margin-left:25%;
+}
+
+li{
+float:left;
+}
+
+li a{
+display:block;
+color:red;
+text-decoration:none;
+background-color:white;
+padding:16px;
+font-size:20px;}
+
+li a:hover{
+color:red;
+text-decoration:none;
+background-color:#4545ff;
+}
+#d2{
+position:absolute;
+top:60px;
+left:20%;
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 20px;
+}
+table{
+border: 1px solid black;
+border-collapse:collapse;
+}
+td  {
+border-bottom:1px solid black;
+}
+.btn-group .button {
+    background-color: white;
+    border: 1px solid black;
+    color: blue;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+	font-weight:bold;
+    cursor: pointer;
+    float: left;
+	margin:10px;
+	border-radius:5px;	
+}
+.btn-group .button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+.btn-group .button:hover {
+    background-color: #f2f2f2;
+}
+</style>
+</head>
+<body>
+<ul>
+<li><a href="C:/Users/rkg09/Desktop/New folder/MiniProject/home.html">HOME</a></li>
+<li><a href="C:/Users/rkg09/Desktop/New folder/MiniProject/allmovies.html">ALL MOVIES</a></li>
+<li><a href="C:/Users/rkg09/Desktop/New folder/MiniProject/booktickets.html">BOOK TICKETS</a></li>
+<li><a href="C:/Users/rkg09/Desktop/New folder/MiniProject/register.html">REGISTER</a></li>
+<li><a href="C:/Users/rkg09/Desktop/New folder/MiniProject/login.html">LOGIN</a></li>
+<li><a href="C:/Users/rkg09/Desktop/New folder/MiniProject/contactus.html">CONTACT US</a></li>
+</ul>
+<script>
+var count = [];
+var seats=0;
+for(var i=0;parseInt(i)<parseInt(100);i=parseInt(i)+parseInt(1))
+{
+  count[i]=parseInt(0);
+}
+function Change_Color(id,m)
+{
+ count[m]=parseInt(count[m])+parseInt(1);
+ if(parseInt(count[m])%parseInt(2)!=0){
+ document.getElementById(id).style.color = 'red';
+ document.getElementById(id).style.backgroundColor='blue';
+ seats=parseInt(seats)+parseInt(1);
+ } 
+ else{
+ document.getElementById(id).style.color = 'blue';
+ document.getElementById(id).style.backgroundColor='white';
+  seats=parseInt(seats)-parseInt(1);
+ }
+}
+function Count_Seats()
+{
+ document.getElementById('d8').innerHTML='No. of seats selected '+seats;
+ if(parseInt(seats)>0)
+ {
+  document.getElementById('pay').style.display='block';
+ }
+}
+function Payment()
+{
+ var price_per_ticket=100;
+ var net_amount=price_per_ticket*seats;
+  document.getElementById('d10').innerHTML='Amount to be paid is '+net_amount+'/-';
+  document.getElementById('payamount').style.display='block';
+}
+</script>
+
+<div id="d2" style="width:950px; height:400px; position:relative; background-color:white;">
+<table>
+
+<tr>
+<td>A</td>
+<td><div class="btn-group">
+  <button class="button" id="A1" onclick="Change_Color(id,0)">1</button></div>
+</td>
+
+<td><div class="btn-group">
+  <button class="button" id="A2" onclick="Change_Color(id,1)">2</button></div>
+</td>
+
+<td><div class="btn-group">
+  <button class="button" id="A3" onclick="Change_Color(id,2)">3</button></div>
+</td>
+
+<td><div class="btn-group">
+  <button class="button" id="A4" onclick="Change_Color(id,3)">4</button></div>
+</td>
+
+<td><div class="btn-group">
+  <button class="button" id="A5" onclick="Change_Color(id,4)">5</button></div>
+</td>
+
+<td><div class="btn-group">
+  <button class="button" id="A6" onclick="Change_Color(id,5)">6</button></div>
+</td>
+
+<td><div class="btn-group">
+  <button class="button" id="A7" onclick="Change_Color(id,6)">7</button></div>
+</td>
+
+<td><div class="btn-group">
+  <button class="button" id="A8" onclick="Change_Color(id,7)">8</button></div>
+</td>
+
+<td><div class="btn-group">
+  <button class="button" id="A9" onclick="Change_Color(id,8)">9</button></div>
+</td>
+
+<td><div class="btn-group">
+  <button class="button" id="A10" onclick="Change_Color(id,9)">10</button></div>
+</td>
+
+<td><div class="btn-group">
+  <button class="button" id="A11" onclick="Change_Color(id,10)">11</button></div>
+</td>
+
+</tr>
+
+<tr>
+<td>B</td>
+
+<td><div class="btn-group">
+  <button class="button" id="B2" onclick="Change_Color(id,11)">12</button></div>
+</td>
+
+<td><div class="btn-group">
+  <button class="button" id="B3" onclick="Change_Color(id,12)">13</button></div>
+</td>
+
+<td><div class="btn-group">
+  <button class="button" id="B4" onclick="Change_Color(id,13)">14</button></div>
+</td>
+
+<td><div class="btn-group">
+  <button class="button" id="B5" onclick="Change_Color(id,14)">15</button></div>
+</td>
+
+<td><div class="btn-group">
+  <button class="button" id="B6" onclick="Change_Color(id,15)">16</button></div>
+</td>
+
+<td><div class="btn-group">
+  <button class="button" id="B7" onclick="Change_Color(id,16)">17</button></div>
+</td>
+
+<td><div class="btn-group">
+  <button class="button" id="B8" onclick="Change_Color(id,17)">18</button></div>
+</td>
+
+<td><div class="btn-group">
+  <button class="button" id="B9" onclick="Change_Color(id,18)">19</button></div>
+</td>
+
+<td><div class="btn-group">
+  <button class="button" id="B10" onclick="Change_Color(id,19)">20</button></div>
+</td>
+
+<td><div class="btn-group">
+  <button class="button" id="B11" onclick="Change_Color(id,20)">21</button></div>
+</td>
+
+<td><div class="btn-group">
+  <button class="button" id="B11" onclick="Change_Color(id,21)">22</button></div>
+</td>
+
+</tr>
+
+</table>
+<button onclick="Count_Seats()">Submit</button>
+<div id="d8"></div>
+<button id="pay" style="display:none;" onclick="Payment()">Pay</button>
+<div id="d10"></div>
+<form action="C:/Users/rkg09/Desktop/New folder/MiniProject/payment.html" method="post"><input type="submit" id="payamount" style="background-color:red; height:50px; display:none; width:200px; border:1px solid black; border-radius:5px; margin-top:20px; margin-left:200px;" value="PROCEED">
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+background-color:red;
+}
+
+ul{
+list-style: none;
+margin-left:25%;
+}
+
+li{
+float:left;
+}
+
+li a{
+display:block;
+color:red;
+text-decoration:none;
+background-color:white;
+padding:16px;}
+
+li a:hover{
+color:red;
+text-decoration:none;
+background-color:#4545ff;
+}
+#d2{
+position:absolute;
+top:60px;
+left:20%;
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 20px;
+}
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #0000ff;
+}
+</style>
+</head>
+<body>
+<ul>
+<li><a href="C:/Users/rkg09/Desktop/New folder/MiniProject/home.html">HOME</a></li>
+<li><a href="C:/Users/rkg09/Desktop/New folder/MiniProject/allmovies.html">ALL MOVIES</a></li>
+<li><a href="C:/Users/rkg09/Desktop/New folder/MiniProject/booktickets.html">BOOK TICKETS</a></li>
+<li><a href="C:/Users/rkg09/Desktop/New folder/MiniProject/register.html">REGISTER</a></li>
+<li><a href="C:/Users/rkg09/Desktop/New folder/MiniProject/login.html">LOGIN</a></li>
+<li><a href="C:/Users/rkg09/Desktop/New folder/MiniProject/contactus.html">CONTACT US</a></li>
+</ul>
+<div id="d2" style="width:950px; height:200px; position:relative; background-color:white;">
+<div class="dropdown">
+  <button class="dropbtn">Payment Mode</button>
+  <div class="dropdown-content">
+    <a href="#">CASH</a>
+    <a href="creditcard.html">CREDIT</a>
+  </div>
+</div>
+</div>
+</body>
+</html>
